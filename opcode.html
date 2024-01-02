@@ -1,0 +1,327 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athena</title>
+</head>
+
+<body>
+    <h2>Opcodes</h2>
+    <table border="2" style="text-align: center;">
+        <tbody>
+            <tr>
+                <th>
+                </th>
+                <th scope="column">0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+                <th>E</th>
+                <th>F</th>
+            </tr>
+            <tr>
+                <th scope="row">0</th>
+                <td bgcolor="#cccccc">FUNC</td>
+                <td bgcolor="#FFFFCC">ADDI</td>
+                <td bgcolor="#FFFFCC">ADDIU</td>
+                <td bgcolor="#FFFFCC">SUBI</td>
+                <td bgcolor="#FFFFCC">SUBIU</td>
+                <td bgcolor="#FFFFCC">ANDI</td>
+                <td bgcolor="#FFFFCC">ORI</td>
+                <td bgcolor="#FFFFCC">XORI</td>
+                <td bgcolor="#FFCCFF">STORE</td>
+                <td bgcolor="#FFCCFF">LOAD</td>
+                <td bgcolor="#CCFFFF">JMP</td>
+                <td>0B</td>
+                <td bgcolor="#FFCCFF">LOADU</td>
+                <td bgcolor="#CCFFFF">CALL</td>
+                <td bgcolor="#FFFFCC">BEQ</td>
+                <td bgcolor="#FFFFCC">BNE</td>
+            </tr>
+            <tr>
+                <th scope="row">1
+                </th>
+                <td bgcolor="#FFFFCC">BLT</td>
+                <td bgcolor="#FFFFCC">BGE</td>
+                <td bgcolor="#FFFFCC">BLTU</td>
+                <td bgcolor="#FFFFCC">BGEU</td>
+                <td bgcolor="#FFFFCC">LDA</td>
+                <td bgcolor="#FFFFCC">LDAH</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>1A</td>
+                <td>1B</td>
+                <td>5C</td>
+                <td>1D</td>
+                <td>1E</td>
+                <td>1F
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2
+                </th>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>2A</td>
+                <td>2B</td>
+                <td>2C</td>
+                <td>2D</td>
+                <td>2E</td>
+                <td>2F
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3
+                </th>
+                <td>30</td>
+                <td>31</td>
+                <td>32</td>
+                <td>33</td>
+                <td>34</td>
+                <td>35</td>
+                <td>36</td>
+                <td>37</td>
+                <td>38</td>
+                <td>39</td>
+                <td>3A</td>
+                <td>3B</td>
+                <td>3C</td>
+                <td>3D</td>
+                <td>3E</td>
+                <td>3F
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">4
+                </th>
+                <td>40</td>
+                <td>41</td>
+                <td>42</td>
+                <td>43</td>
+                <td>44</td>
+                <td>45</td>
+                <td>46</td>
+                <td>47</td>
+                <td>48</td>
+                <td>49</td>
+                <td>4A</td>
+                <td>4B</td>
+                <td>4C</td>
+                <td>4D</td>
+                <td>4E</td>
+                <td>4F
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">5
+                </th>
+                <td>50</td>
+                <td>51</td>
+                <td>52</td>
+                <td>53</td>
+                <td>54</td>
+                <td>55</td>
+                <td>56</td>
+                <td>57</td>
+                <td>58</td>
+                <td>59</td>
+                <td>5A</td>
+                <td>5B</td>
+                <td>5C</td>
+                <td>5D</td>
+                <td>5E</td>
+                <td>5F
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">6
+                </th>
+                <td>60</td>
+                <td>61</td>
+                <td>62</td>
+                <td bgcolor="#cccccc">SYSTEM</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Functions</h2>
+    <table border="2" style="text-align: center;">
+        <tbody>
+            <tr>
+                <th>
+                </th>
+                <th scope="column">0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+                <th>E</th>
+                <th>F</th>
+            </tr>
+            <tr>
+                <th scope="row">0</th>
+                <td>00</td>
+                <td bgcolor="#FFFFCC">ADD</td>
+                <td bgcolor="#FFFFCC">ADDW</td>
+                <td bgcolor="#FFFFCC">SUB</td>
+                <td bgcolor="#FFFFCC">SUBW</td>
+                <td bgcolor="#FFFFCC">ADD</td>
+                <td bgcolor="#FFFFCC">DIV</td>
+                <td bgcolor="#FFFFCC">DIVU</td>
+                <td bgcolor="#FFFFCC">MULT</td>
+                <td bgcolor="#FFFFCC">MULTU</td>
+                <td bgcolor="#FFFFCC">NOR</td>
+                <td bgcolor="#FFFFCC">OR</td>
+                <td bgcolor="#FFFFCC">XOR</td>
+                <td bgcolor="#FFFFCC">SLL</td>
+                <td bgcolor="#FFFFCC">SRL</td>
+                <td bgcolor="#FFFFCC">SRA</td>
+            </tr>
+            <tr>
+                <th scope="row">1
+                </th>
+                <td bgcolor="#FFFFCC">SLLR</td>
+                <td bgcolor="#FFFFCC">SRAR</td>
+                <td bgcolor="#FFFFCC">SRLR</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>1A</td>
+                <td>1B</td>
+                <td>5C</td>
+                <td>1D</td>
+                <td>1E</td>
+                <td>1F
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2
+                </th>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>2A</td>
+                <td>2B</td>
+                <td>2C</td>
+                <td>2D</td>
+                <td>2E</td>
+                <td>2F
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3
+                </th>
+                <td>30</td>
+                <td>31</td>
+                <td>32</td>
+                <td>33</td>
+                <td>34</td>
+                <td>35</td>
+                <td>36</td>
+                <td>37</td>
+                <td>38</td>
+                <td>39</td>
+                <td>3A</td>
+                <td>3B</td>
+                <td>3C</td>
+                <td>3D</td>
+                <td>3E</td>
+                <td>3F
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">4
+                </th>
+                <td>40</td>
+                <td>41</td>
+                <td>42</td>
+                <td>43</td>
+                <td>44</td>
+                <td>45</td>
+                <td>46</td>
+                <td>47</td>
+                <td>48</td>
+                <td>49</td>
+                <td>4A</td>
+                <td>4B</td>
+                <td>4C</td>
+                <td>4D</td>
+                <td>4E</td>
+                <td>4F
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">5
+                </th>
+                <td>50</td>
+                <td>51</td>
+                <td>52</td>
+                <td>53</td>
+                <td>54</td>
+                <td>55</td>
+                <td>56</td>
+                <td>57</td>
+                <td>58</td>
+                <td>59</td>
+                <td>5A</td>
+                <td>5B</td>
+                <td>5C</td>
+                <td>5D</td>
+                <td>5E</td>
+                <td>5F
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">6
+                </th>
+                <td>60</td>
+                <td>61</td>
+                <td>62</td>
+                <td>63</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
