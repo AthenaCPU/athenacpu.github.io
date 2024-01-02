@@ -21,6 +21,8 @@ jobs:
       - name: Generate
         run: |
           guix environment -C -m manifest.scm -- haunt build
+          cp favicon.ico site/
+          cp opcode.html site/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
